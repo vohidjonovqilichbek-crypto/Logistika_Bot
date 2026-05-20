@@ -145,6 +145,7 @@ app = web.Application()
 app.router.add_post('/{token}', handle)
 
 if __name__ == '__main__':
-    # Render tekin tarifida portni avtomatik beradi, bo'lmasa 8080 ishlaydi
-    port = int(os.environ.get("PORT", 8080))
-    web.run_app(app, host='0.0.0.0', port=port)
+    # Render portni muhitdan oladi, u bo'lmasa majburiy 10000 portda ishlaydi
+    port = int(os.getenv("PORT", 10000))
+    web.run_app(app, host="0.0.0.0", port=port)
+
