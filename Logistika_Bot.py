@@ -12,7 +12,7 @@ ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
-exchange = ccxt.binance()
+exchange = ccxt.bybit()
 
 # Kripto va Oltin ro'yxati
 crypto_list = [
